@@ -1,0 +1,26 @@
+<%- include('../partials/header') %>
+
+    <h1><%= title %></h1>
+    <div>here be <%= title %></div>
+    <div><a href="/boards/new">Create New</a></div>
+    <table>
+        <thead>
+            <tr>
+                <th>Your boards</th>
+            </tr>
+            <tr>
+                <th>Title</th>
+                <th>Description</th>
+            </tr>
+        </thead>
+        <tbody>
+            <% boards.forEach(function(b) { %>
+
+                <tr><%= b.name %></tr>
+                <tr><%= b.description %></tr>
+                <tr><a href="/boards/<%= b._id %>">Link</a></tr>
+            <% }); %>
+        </tbody>
+    </table>
+
+<%- include('../partials/footer') %>
