@@ -3,12 +3,12 @@ const Board = require('../models/board');
 function index(req, res) {
     Board.find({}, function(err, boards) {
         console.log(boards);
-        res.render('boards/index', {title: 'Boards', boards: boards});
+        res.render('boards/index', {pagetitle: 'Boards', boards: boards});
     });
 };
 
 function defineBoard(req, res) {
-    res.render('boards/new', {title: 'Add Board'});
+    res.render('boards/new', {pagetitle: 'Add Board'});
 };
 
 function createBoard(req, res) {
@@ -25,19 +25,8 @@ function show(req, res) {
     console.log(req.params.boardId);
     Board.findById(req.params.boardId, function(err, board) {
         console.log(board);
-        res.render('boards/show', { title: 'Board', board});
-        // , {title: 'Board', board: board, description: description}
+        res.render('boards/show', { pagetitle: 'Board', board});
     });
-
-    // let board = Board.find({_id:req.params.boardId});
-    // console.log(Board);
-
-    // console.log(board);
-    
-    // console.log(req.params.boardId);
-    // // Board.findById(req.params.id);
-    // res.send(`details of ${req.params.boardId}`);
-    
 };
 
 module.exports = {

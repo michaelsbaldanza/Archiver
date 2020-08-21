@@ -1,5 +1,26 @@
 <%- include('../partials/header'); %>
 
 <h2><%= board.name %></h2>
+<p><%= board.description %></p>
 
+<div class="add-form">
+    <form id="add-poem-form" method="POST" action="/boards/<%= board._id %>/poems">
+        <label>Title</label>
+            <input name="poem-title" autocomplete="none">
+        </label>
+        <label>Author
+            <input name="poem-author" autocomplete="none">
+        </label>
+        <textarea name="poem-text"></textarea>
+        <input type="submit" value="Add Poem">
+    </form>
+</div>
+
+<div class="poem-display">
+    <% board.poems.forEach(function(p) { %>
+        <h3>"<%= p.title %>"</h3>
+        <p><%= p.author %></p>
+        <p><%= p.content %></p>
+    <% }) %>
+</div>
 <%- include('../partials/footer'); %>

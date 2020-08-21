@@ -4,6 +4,7 @@ const Schema = mongoose.Schema;
 const poemSchema = new Schema({
     title: String,
     author: String,
+    content: String,
     lines: [],
     linecount: Number
 });

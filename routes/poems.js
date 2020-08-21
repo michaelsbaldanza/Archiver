@@ -1,7 +1,9 @@
-// var express = require('express');
-// var router = express.Router();
-// var poemsCtrl = require('../controllers/poems');
+var express = require('express');
+var router = express.Router();
+var poemsCtrl = require('../controllers/poems');
 
-// router.post('/boards/:id/poems', poemsCtrl.create);
+router.post('/boards/:id/poems', poemsCtrl.create);
 
-// module.exports = router;
+
+
+module.exports = router;
