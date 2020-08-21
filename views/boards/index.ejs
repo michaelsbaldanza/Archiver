@@ -1,7 +1,5 @@
 <%- include('../partials/header') %>
 
-    <h1><%= title %></h1>
-    <div>here be <%= title %></div>
     <div><a href="/boards/new">Create New</a></div>
     <table>
         <thead>
@@ -15,10 +13,11 @@
         </thead>
         <tbody>
             <% boards.forEach(function(b) { %>
-
-                <tr><%= b.name %></tr>
-                <tr><%= b.description %></tr>
-                <tr><a href="/boards/<%= b._id %>">Link</a></tr>
+            <tr>
+                <td><%= b.name %></td>
+                <td><%= b.description %></td>
+                <td><a href="/boards/<%= b._id %>">Link</a></td>
+            </tr>
             <% }); %>
         </tbody>
     </table>
