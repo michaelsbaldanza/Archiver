@@ -24,7 +24,8 @@ function createBoard(req, res) {
 function show(req, res) {
     Board.findById(req.params.id, function(err, board) {
         console.log(req.params.id);
-        res.render('boards/show', { title: 'Board'});
+        console.log(board);
+        res.render('boards/show', { title: 'Board', board});
         // , {title: 'Board', board: board, description: description}
     });
 

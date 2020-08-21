@@ -1,0 +1,10 @@
+<form id="add-poem-form" method="POST" action="/boards/<%= board._id %>/poems">
+    <label>Title</label>
+        <input name="poem-title" autocomplete="none">
+    </label>
+    <label>Author
+        <input name="poem-author" autocomplete="none">
+    </label>
+    <textarea name="poem-text"></textarea>
+    <input type="submit" value="Add Poem">
+</form>

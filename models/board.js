@@ -1,17 +1,17 @@
 const mongoose = require('mongoose');
 const Schema = mongoose.Schema;
 
-// const poemSchema = newSchema({
-//     title: String,
-//     author: String,
-//     lines: [],
-//     linecount: 14
-// });
+const poemSchema = new Schema({
+    title: String,
+    author: String,
+    lines: [],
+    linecount: Number
+});
 
 const boardSchema = new Schema({
     name: String,
     description: String,
-    poems: [String],
+    poems: [poemSchema],
     //will be an array of poem schema instead of string
     noPoems: Number
 });
