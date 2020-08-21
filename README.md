@@ -4,7 +4,7 @@ _Archiver_ will be a means for users to organize and view poems. A user might be
 
 # Screenshot
 
-![Homepage](/images/archiver-homepage.png)
+![Homepage](/public/images/archiver-homepage.png)
 
 # Technologies Used
 
