@@ -22,5 +22,6 @@ _Archiver_ will be a means for users to organize and view poems. A user might be
 # Next Steps
 
 * fix functionality for displaying poems
+* add API
 * add functionality for deleting poems and boards
 * add functionality for user login
