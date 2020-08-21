@@ -1,12 +1,16 @@
 const mongoose = require('mongoose');
 
-process.env.DATABASE_URL;
+// mongoose.connect('mongodb://localhost/project2', {
+//     useNewUrlParser: true,
+//     useUnifiedTopology: true,
+//     useCreateIndex: true
+// });
 
-mongoose.connect('mongodb://localhost/project2', {
+mongoose.connect(process.env.DATABASE_URL, {
     useNewUrlParser: true,
     useUnifiedTopology: true,
     useCreateIndex: true
-});
+  });
 
 const db = mongoose.connection;
 

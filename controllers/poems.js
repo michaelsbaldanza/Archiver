@@ -6,7 +6,7 @@ function create(req, res) {
         board.save(function(err) {
             res.redirect(`/boards/${board._id}`);
         });
-        console.log(board.poems);
+        // console.log(board.poems);
     });
 };
 
